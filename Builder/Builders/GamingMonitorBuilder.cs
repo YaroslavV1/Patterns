@@ -5,6 +5,12 @@ namespace Builder.Builders;
 
 public class GamingMonitorBuilder : IMonitorBuilder
 {
+    private const string MATRIX = "IPS";
+    private const string DIAGONAL = "24";
+    private const string SCREENRESOLUTION = "2560x1440";
+    private const string UPDATEFREQUENCY = "1ms";
+    private const string CONTRAST = "3000:1";
+    
     private readonly Monitor _monitor;
 
     public GamingMonitorBuilder()
@@ -14,31 +20,31 @@ public class GamingMonitorBuilder : IMonitorBuilder
     
     public IMonitorBuilder BuildMatrix()
     {
-        _monitor.Matrix = "IPS";
+        _monitor.Matrix = MATRIX;
         return this;
     }
 
     public IMonitorBuilder BuildDiagonal()
     {
-        _monitor.Diagonal = "24";
+        _monitor.Diagonal = DIAGONAL;
         return this;
     }
 
     public IMonitorBuilder BuildScreenResolution()
     {
-        _monitor.ScreenResolution = "2560x1440";
+        _monitor.ScreenResolution = SCREENRESOLUTION;
         return this;
     }
 
     public IMonitorBuilder BuildUpdateFrequency()
     {
-        _monitor.UpdateFrequency = "1ms";
+        _monitor.UpdateFrequency = UPDATEFREQUENCY;
         return this;
     }
 
     public IMonitorBuilder BuildContrast()
     {
-        _monitor.Contrast = "3000:1";
+        _monitor.Contrast = CONTRAST;
         return this;
     }
 
