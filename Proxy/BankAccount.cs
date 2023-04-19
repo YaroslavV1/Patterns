@@ -4,25 +4,25 @@ namespace Proxy;
 
 public class BankAccount : IBankAccount
 {
-    private decimal _initialBalance;
+    private decimal _balance;
 
-    public BankAccount(decimal initialBalance)
+    public BankAccount(decimal balance)
     {
-        _initialBalance = initialBalance;
+        _balance = balance;
     }
     
     public void Deposit(decimal amount)
     {
-        _initialBalance += amount;
+        _balance += amount;
     }
 
     public void Withdraw(decimal amount)
     {
-        _initialBalance -= amount;
+        _balance -= amount;
     }
 
     public decimal GetBalance()
     {
-        return _initialBalance;
+        return _balance;
     }
 }
